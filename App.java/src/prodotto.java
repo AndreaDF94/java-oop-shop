@@ -25,3 +25,30 @@ public class Prodotto {
         this.iva = iva;
     }
 
+    
+    // Metodo per ottenere il prezzo base
+    public double getPrezzoBase() {
+        return prezzo;
+    }
+
+    // Metodo per calcolare e restituire il prezzo con l'IVA inclusa
+    public double getPrezzoConIva() {
+        return prezzo + (prezzo * iva / 100);
+    }
+
+    // Metodo per ottenere una stringa "codice-nome" per identificare il prodotto
+    public String getNomeEsteso() {
+        return codice + "-" + nome;
+    }
+
+    // Metodo per stampare a schermo tutte le informazioni del prodotto
+    public void stampaDettagli() {
+        System.out.println("Codice: " + codice);
+        System.out.println("Nome: " + nome);
+        System.out.println("Descrizione: " + descrizione);
+        System.out.println("Prezzo base: " + prezzo + " €");
+        System.out.println("Prezzo con IVA: " + getPrezzoConIva() + " €");
+        System.out.println("Nome esteso: " + getNomeEsteso());
+    }
+}
+
